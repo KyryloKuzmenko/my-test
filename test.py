@@ -1,13 +1,12 @@
-def func(f):
+def func(a, b):
     def wrap():
         print('some happen')
-        f()
         print("That's so easy!")
+        return a + b
 
     return wrap
-@func
-def func2():
-    print("my message")
 
-func2()
+qw = func(2, 5)
+print(qw())
+
 
