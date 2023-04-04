@@ -1,12 +1,17 @@
-def func(a, b):
-    def wrap():
-        print('some happen')
-        print("That's so easy!")
+def func(f):
+    def wrap(a, b):
+        print('First print')
+        print(f())
+        print('Thirt print')
         return a + b
-
+        
     return wrap
 
-qw = func(2, 5)
-print(qw())
+@func
+def qwer():
+    s = 'Second print'
+    return s
 
+
+print(qwer(2, 5))
 
